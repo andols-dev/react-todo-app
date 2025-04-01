@@ -12,28 +12,6 @@ Welcome to my Todo List App! This application makes it easy to manage your daily
 ## 🎨 **Style and Design**
 This app uses **Bootstrap** to provide a modern and responsive design that works seamlessly on mobile devices, tablets, and desktops. This ensures that your todo list looks great on all devices without any extra effort!
 
-## 📦 **Installation**
-To get started with the app on your local machine, follow these simple steps:
-
-### Step 1: Clone the repository
-```bash
-git clone https://github.com/andols-dev/todo-list-react.git
-```
-
-### Step 2: Install dependencies
-Navigate to the project folder and install all dependencies using npm:
-```bash
-cd todo-list-react
-npm install
-```
-
-### Step 3: Run the app
-Start the app locally:
-```bash
-npm start
-```
-The app will now open at `http://localhost:3000`.
-
 ## 🛠️ **Tech Stack**
 - **React**: For building a dynamic user interface.
 - **Bootstrap**: For a sleek and responsive design without needing to write custom CSS rules.
