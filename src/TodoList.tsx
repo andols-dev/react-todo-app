@@ -59,43 +59,44 @@ const TodoList = () => {
     };
 
     return (
-        <>
-            <form onSubmit={handleSubmit}>
+        <div className="container mt-5">
+            <h1 className="text-center mb-4">Todo List</h1>
+            <form onSubmit={handleSubmit} className="d-flex mb-4">
                 <input
                     type="text"
                     onChange={handleChange}
                     placeholder="Add a new todo"
+                    className="form-control me-2"
                 />
-                <button type="submit">Add</button>
+                <button type="submit" className="btn btn-primary">Add</button>
             </form>
 
-            <h1>Todo List</h1>
-            <ul>
+            <ul className="list-group">
                 {todoList.map(todo => (
-                    <li key={todo.id}>
+                    <li key={todo.id} className="list-group-item d-flex justify-content-between align-items-center">
                         {todo.text}
-                        <span>
+                        <div>
                             <button
                                 onClick={() => deleteTodo(todo.id)}
+                                className="btn btn-danger btn-sm ms-2"
                                 aria-label={`Delete todo ${todo.text}`}
                             >
-                                delete
+                                Delete
                             </button>
-                        </span>
-                        <span>
                             <button
                                 onClick={() => {
                                     const newText = prompt('Update todo', todo.text);
                                     if (newText) updateTodo(todo.id, newText);
                                 }}
+                                className="btn btn-warning btn-sm ms-2"
                             >
-                                update
+                                Update
                             </button>
-                        </span>
+                        </div>
                     </li>
                 ))}
             </ul>
-        </>
+        </div>
     );
 }
 
